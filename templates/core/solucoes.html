@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nossas Soluções - Data Medley{% endblock %}
+
+{% block content %}
+<main class="-mt-[5.5rem]">
+    <section class="pt-40 pb-16 bg-cinza-claro text-center">
+        <div class="container mx-auto px-6" data-aos="fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold text-azul-corp">Nossas Soluções</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mt-4 text-grafite">Detalhes sobre como transformamos dados em valor para o seu negócio.</p>
+        </div>
+    </section>
+
+    <section id="engenharia" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-cinza-claro h-80 rounded-lg shadow-lg flex items-center justify-center" data-aos="fade-right">
+                    <span class="text-grafite/50 text-xl">[Placeholder para Imagem Ilustrativa]</span>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-azul-corp mb-4">🏗️ Engenharia de Dados</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        A base de qualquer decisão inteligente é uma arquitetura de dados sólida. Nós projetamos e implementamos a infraestrutura robusta, segura e escalável que seus dados precisam para fluir com eficiência, desde a coleta em múltiplas fontes até o armazenamento otimizado, garantindo a integridade e a disponibilidade da sua informação mais valiosa.
+                    </p>
+                    <a href="{% url 'index' %}#contato" class="bg-ciano-tech text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-opacity-90 transition-transform transform hover:scale-105">
+                        Saber Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-cinza-claro h-80 rounded-lg shadow-lg flex items-center justify-center" data-aos="fade-right">
+                    <span class="text-grafite/50 text-xl">[Placeholder para Imagem Ilustrativa]</span>
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-azul-corp mb-4">📊 Business Intelligence</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Transformamos a complexidade dos dados em clareza visual. Criamos painéis de BI interativos e relatórios dinâmicos que permitem a você e sua equipe explorar as métricas de negócio em tempo real, de forma intuitiva. Monitore KPIs, entenda a performance e tome decisões mais rápidas e bem-informadas com uma visão 360º da sua operação.
+                    </p>
+                    <a href="{% url 'index' %}#contato" class="bg-ciano-tech text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-opacity-90 transition-transform transform hover:scale-105">
+                        Saber Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ia" class="py-20 bg-cinza-claro">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-azul-corp mb-4">🧠 Inteligência Artificial</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Com uma base de dados bem estruturada, nossos agentes de IA entram em ação. Desenvolvemos e treinamos modelos de machine learning personalizados para o seu negócio, capazes de identificar padrões ocultos, prever tendências, automatizar processos e gerar insights que seriam impossíveis de se obter manualmente, impulsionando a inovação e a vantagem competitiva.
+                    </p>
+                    <a href="{% url 'index' %}#contato" class="bg-ciano-tech text-white font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-opacity-90 transition-transform transform hover:scale-105">
+                        Saber Mais
+                    </a>
+                </div>
+                <div class="bg-white h-80 rounded-lg shadow-lg flex items-center justify-center" data-aos="fade-left">
+                    <span class="text-grafite/50 text-xl">[Placeholder para Imagem Ilustrativa]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</main>
+{% endblock %}

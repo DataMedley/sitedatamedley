@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Data Medley - Inteligência de Dados{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        .bg-hero-pattern {
+            background-image: linear-gradient(rgba(10, 42, 78, 0.75), rgba(10, 42, 78, 0.75)), url("{% static 'images/fundo_heroi.png' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'azul-corp': '#0A2A4E',
+                        'ciano-tech': '#00BFFF',
+                        'cinza-claro': '#F0F2F5',
+                        'grafite': '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-grafite">
+
+    {% include 'partials/header.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'partials/footer.html' %}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
